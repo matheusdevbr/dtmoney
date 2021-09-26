@@ -7,15 +7,17 @@ createServer({
   routes() {
     this.namespace = 'api';
 
-    this.get('/trasactions', () => {
-      return [{
-        id: 1,
-        title: 'Transactions 1',
-        amount: 400,
-        type: 'deposit',
-        category: 'food',
-        createdAt: new Date()
-      }]
+    this.get('/transactions', () => {
+      return [
+        {
+          id: 1,
+          title: 'Transactions 1',
+          amount: 400,
+          type: 'deposit',
+          category: 'food',
+          createdAt: new Date()
+        }
+      ]
     })
   }
 })
